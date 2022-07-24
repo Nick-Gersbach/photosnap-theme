@@ -20,12 +20,33 @@
   overflow: hidden;
 }
 
+.post-page-content {
+  max-width: 750px;
+  margin: 5rem 5rem;
+  padding: 0 2rem;
+  overflow: hidden;
+  line-height: 1.9;
+}
+
+.archive-stories {
+  margin-top: 5rem;
+}
+
 .the-title-heading {
   margin-bottom: 3rem;
 }
 
+.blog-title-heading {
+  margin-bottom: 10px;
+}
+
 .generic-page-content p {
   margin: 1.5rem 0;
+}
+
+.all-stories-from {
+  text-align: center;
+  margin-top: 5rem;
 }
 
 h1 {
@@ -34,7 +55,7 @@ h1 {
 }
 
 h2 {
-  font-size: 40px;
+  font-size: 28px;
   font-weight: bold;
   letter-spacing: 4px;
 }
@@ -53,6 +74,8 @@ p {
   font-size: 15px;
   font-weight: 400;
   letter-spacing: 1px;
+  line-height: 1.9;
+  margin: 1rem 0;
 }
 
 a {
@@ -260,6 +283,11 @@ STORIES
 .story-author {
   font-size: 13px;
   font-weight: 400;
+  color: white;
+}
+
+.story-author a {
+  color: white;
 }
 
 .gray-line {
@@ -283,6 +311,11 @@ STORIES
 .story-link {
   color: #fff;
   font-weight: 700;
+}
+
+.pagination-links {
+  text-align: center;
+  padding: 1rem 0;
 }
 
 #mountain-story {
@@ -410,6 +443,10 @@ STORIES PAGE
   margin-left: 8rem;
   width: 35%;
   line-height: 1.8 !important;
+}
+
+.story-title a {
+  color: white;
 }
 
 .stories-showcase-text h4 {
@@ -1011,6 +1048,14 @@ Media Queries
     margin-top: 3rem;
     font-size: 22px;
   }
+
+  .post-page-content {
+    max-width: 90%;
+    margin: 3rem 0;
+    padding: 0 2rem;
+    overflow: hidden;
+    line-height: 1.9;
+  }
 }
 
 @media only screen and (max-width: 600px) {
@@ -1023,6 +1068,18 @@ Media Queries
 
   .container {
     padding: 1rem;
+  }
+
+  .post-page-content {
+    width: 90%;
+    margin: 3rem 0;
+    padding: 0 2rem;
+    overflow: hidden;
+    line-height: 1.9;
+  }
+
+  .all-stories-from {
+    padding: 0 2rem;
   }
 
   #create-and-share {

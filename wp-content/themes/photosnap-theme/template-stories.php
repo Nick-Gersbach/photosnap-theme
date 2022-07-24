@@ -13,7 +13,7 @@ Template Name: Stories
         <h4>LAST MONTH'S FEATURED STORY</h4>
         <h2>HAZY FULL MOON OF APPALACHIA</h2>
         <p class="story-showcase-author">
-          March 2nd 2022 <span class="bold-text">by John Appleseed</span>
+          March 2nd 2022 test <span class="bold-text">by John Appleseed</span>
         </p>
         <p class="story-showcase-exerpt">
           The dissected plateau area, while not actually made up of geological

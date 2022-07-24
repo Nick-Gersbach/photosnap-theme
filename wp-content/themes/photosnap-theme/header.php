@@ -21,7 +21,7 @@
             </a>
           </div>
           <ul class="nav-menu">
-            <li><a href="<?php echo site_url('/stories')?>">STORIES</a></li>
+            <li><a href="<?php echo site_url('/blog')?>">STORIES</a></li>
             <li><a href="<?php echo site_url('/features')?>">FEATURES</a></li>
             <li><a href="<?php echo site_url('/pricing')?>">PRICING</a></li>
             <li><a class="mobile-nav-btn" href="#">GET AN INVITE</a></li>
