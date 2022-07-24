@@ -58,81 +58,42 @@
       </div>
       <div class="camera-img" style="background: url(<?php echo get_theme_file_uri('/img/designed-for-everyone.jpg') ?>) no-repeat center center/cover;"></div>
     </section>
+
+
     <section id="stories">
-      <div id="mountain-story" class="story" style=" background: linear-gradient(rgba(20, 20, 20, 0.3), rgba(20, 20, 20, 0.3)),
+      <?php 
+      $homepagePosts = new WP_Query(array(
+        'posts_per_page' => 4
+      ));
+      while($homepagePosts->have_posts()) {
+        $homepagePosts->the_post(); ?>
+
+          <div id="mountain-story" class="story" style=" background: linear-gradient(rgba(20, 20, 20, 0.3), rgba(20, 20, 20, 0.3)),
     url(<?php echo get_theme_file_uri('/img/mountains.jpg') ?>) no-repeat center center/cover;">
         <div class="story-description">
-          <h3 class="story-title">The Mountains</h3>
-          <p class="story-author">by John Appleseed</p>
+          <h3 class="story-title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
+          <p class="story-author">by <?php the_author_posts_link() ?></p>
         </div>
         <div class="gray-line"></div>
         <div class="read-story-link">
           <div>
-            <a class="story-link" href="#">READ STORY</a>
+            <a class="story-link" href="<?php the_permalink(); ?>">READ STORY</a>
           </div>
           <div>
-            <a href="#">
+            <a href="<?php the_permalink(); ?>">
               <img src="<?php echo get_theme_file_uri('/img/arrow.svg') ?>" alt="" />
             </a>
           </div>
         </div>
       </div>
-      <div id="sunset-story" class="story" style="background: linear-gradient(rgba(20, 20, 20, 0.3), rgba(20, 20, 20, 0.3)),
-    url(<?php echo get_theme_file_uri('/img/cityscapes.jpg') ?>) no-repeat center center/cover;
-">
-        <div class="story-description">
-          <h3 class="story-title">Sunset Cityscapes</h3>
-          <p class="story-author">by Benjamin Cruz</p>
-        </div>
-        <div class="gray-line"></div>
-        <div class="read-story-link">
-          <div>
-            <a class="story-link" href="#">READ STORY</a>
-          </div>
-          <div>
-            <a href="#">
-              <img src="<?php echo get_theme_file_uri('/img/arrow.svg') ?>" alt="" />
-            </a>
-          </div>
-        </div>
-      </div>
-      <div id="voyage-story" class="story" style=" background: linear-gradient(rgba(20, 20, 20, 0.3), rgba(20, 20, 20, 0.3)),
-    url(<?php echo get_theme_file_uri('/img/18-days-voyage.jpg') ?>) no-repeat center center/cover;
-">
-        <div class="story-description">
-          <h3 class="story-title">18 Days Voyage</h3>
-          <p class="story-author">by Alexei Borodin</p>
-        </div>
-        <div class="gray-line"></div>
-        <div class="read-story-link">
-          <div>
-            <a class="story-link" href="#">READ STORY</a>
-          </div>
-          <div>
-            <a href="#">
-              <img src="<?php echo get_theme_file_uri('/img/arrow.svg') ?>" alt="" />
-            </a>
-          </div>
-        </div>
-      </div>
-      <div id="architect-story" class="story" style="  background: linear-gradient(rgba(20, 20, 20, 0.3), rgba(20, 20, 20, 0.3)),
-    url(<?php echo get_theme_file_uri('/img/architecturals.jpg') ?>) no-repeat center center/cover;">
-        <div class="story-description">
-          <h3 class="story-title">Architecturals</h3>
-          <p class="story-author">by Samantha Brooke</p>
-        </div>
-        <div class="gray-line"></div>
-        <div class="read-story-link">
-          <div>
-            <a class="story-link" href="#">READ STORY</a>
-          </div>
-          <div>
-            <a href="#">
-              <img src="<?php echo get_theme_file_uri('/img/arrow.svg') ?>" alt="" />
-            </a>
-          </div>
-        </div>
-      </div>
+
+      <?php
+      
+    } wp_reset_postdata();
+
+      ?>
+ 
+      
     </section>
     <section id="home-features">
       <div class="home-feature">
