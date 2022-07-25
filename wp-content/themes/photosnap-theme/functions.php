@@ -19,9 +19,25 @@ add_action('wp_enqueue_scripts', 'photosnap_files');
 
 function theme_features() {
   add_theme_support('title-tag');
+  add_theme_support('post-thumbnails');
 }
 
 add_action('after_setup_theme', 'theme_features');
+
+
+
+
+function photosnap_post_types() {
+  register_post_type('stories', array(
+    'public' => true,
+    'labels' => array(
+      'name' => 'Stories'
+    ),
+    'menu_icon' => 'dashicons-book'
+  ));
+}
+
+add_action('init', 'photosnap_post_types');
 
 
 

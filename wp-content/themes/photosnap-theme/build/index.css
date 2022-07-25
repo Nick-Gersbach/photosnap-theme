@@ -37,6 +37,7 @@
 }
 
 .blog-title-heading {
+  font-size: 32px;
   margin-bottom: 10px;
 }
 
@@ -49,9 +50,19 @@
   margin-top: 5rem;
 }
 
+.header-wrap {
+  height: 400px;
+  width: 400px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 h1 {
   font-size: 40px;
   font-weight: bold;
+  text-align: center;
 }
 
 h2 {
@@ -1076,6 +1087,9 @@ Media Queries
     padding: 0 2rem;
     overflow: hidden;
     line-height: 1.9;
+  }
+  .header-wrap {
+    width: 100%;
   }
 
   .all-stories-from {

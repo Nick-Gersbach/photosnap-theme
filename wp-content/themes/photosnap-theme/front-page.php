@@ -66,10 +66,13 @@
         'posts_per_page' => 4
       ));
       while($homepagePosts->have_posts()) {
-        $homepagePosts->the_post(); ?>
+        $homepagePosts->the_post();
+           $backgroundImg = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
+        
+        ?>
 
           <div id="mountain-story" class="story" style=" background: linear-gradient(rgba(20, 20, 20, 0.3), rgba(20, 20, 20, 0.3)),
-    url(<?php echo get_theme_file_uri('/img/mountains.jpg') ?>) no-repeat center center/cover;">
+    url('<?php echo $backgroundImg[0]; ?>') no-repeat center center/cover;">
         <div class="story-description">
           <h3 class="story-title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
           <p class="story-author">by <?php the_author_posts_link() ?></p>
